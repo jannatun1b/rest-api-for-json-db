@@ -1,10 +1,22 @@
-/**
- *@desc get all users data
+import { readFileSync } from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
- *@name GET /api/v1/user/
- *@access public
- */
+// Convert import.meta.url → __dirname (ESM fix)
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-const getAllUser = (req, res) => {
-  res.send('Success');
+export const getAllUser = (req, res) => {
+  // Correct path join
+  const filePath = path.join(__dirname, '../db/users.json');
+
+  // Read file
+  const users = readFileSync(filePath, 'utf-8');
+
+  res.send(users);
+};
+
+export const createUser = (req, res) => {
+  console.log('POST HIT:', req.body);
+  res.send('POST working');
 };

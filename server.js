@@ -1,22 +1,21 @@
-const express = require('express');
-const colors = require('colors');
-const dotenv = require('dotenv').config();
-const userRoutes = require('./routes/user');
-//init environment variable
+import express from 'express';
+import colors from 'colors';
+import dotenv from 'dotenv';
+import userRoute from './routes/user.js';
+
+dotenv.config();
+
 const PORT = process.env.PORT || 8080;
 
-//express init
 const app = express();
 
-//express middlewaries
-
+// Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-//api routes
-app.use('/api/v1/user'.userRouter);
+// Routes
+app.use('/api/v1/user', userRoute);
 
-//listen port
 app.listen(PORT, () => {
-  console.log(`server is running on port ${PORT}`.bgGreen.black);
+  console.log(`Server running on port ${PORT}`.bgGreen.black);
 });
