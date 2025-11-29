@@ -15,8 +15,11 @@ export const getAllUser = (req, res) => {
 
   res.send(users);
 };
-
 export const createUser = (req, res) => {
   console.log('POST HIT:', req.body);
-  res.send('POST working');
+
+  res.json({
+    message: 'POST working',
+    data: req.body,
+  });
 };
