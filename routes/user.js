@@ -7,12 +7,24 @@
 // router.post('/', createUser);
 
 // export default router;
+// import express from 'express';
+// import { getAllUser, createUser } from '../controllers/usercontroller.js';
+
+// const router = express.Router();
+
+// router.get('/', getAllUser);
+// router.post('/', createUser);
+
+// export default router;
 import express from 'express';
-import { getAllUser, createUser } from '../controllers/usercontroller.js';
+
+import { getAllUser, createUser, getSingleUser, updateUser, deleteUser } from '';
 
 const router = express.Router();
 
 router.get('/', getAllUser);
 router.post('/', createUser);
+
+router.get('/:id', getSingleUser); // Single User
 
 export default router;

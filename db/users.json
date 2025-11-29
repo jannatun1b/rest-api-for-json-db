@@ -28,5 +28,29 @@
     "name": "Kayda",
     "age": 15,
     "marriage": true
+  },
+  {
+    "name": "Azam",
+    "skill": "JavaScript"
+  },
+  {
+    "name": "dilar",
+    "skill": "JavaScript"
+  },
+  {
+    "name": "dilara",
+    "skill": "JavaScript"
+  },
+  {
+    "name": "dilara",
+    "skill": "JavaScript"
+  },
+  {
+    "name": "azam",
+    "skill": "JavaScript"
+  },
+  {
+    "name": "azam",
+    "skill": "JavaScript"
   }
 ]
